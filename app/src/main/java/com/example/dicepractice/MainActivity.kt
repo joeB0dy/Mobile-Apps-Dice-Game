@@ -15,9 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+        var diceValue = Random.nextInt(1,7)  //use kotlin version of random. (Alt + Enter)
         //set button event handler. below is exclusive of top value.
         binding.btnRollDie.setOnClickListener {
-            var diceValue = Random.nextInt(1,7)  //use kotlin version of random. (Alt + Enter)
+
             //clever way to avoid many if statements
             var imageName = "@drawable/dice" + diceValue //only works bc png share dice name + value.
             //retrieve resource ID. system knows this.
@@ -25,6 +26,17 @@ class MainActivity : AppCompatActivity() {
 
             binding.ivDie.setImageResource(resourceID)
         }//end. test on macbook with virtual AVD
+
+
+
+
+        //guess button stuff
+        binding.btnGuess.setOnClickListener{
+
+        }
+
+
+
     }//on Create end
 }
 //step one, set viewbinding to true in build.gradle
