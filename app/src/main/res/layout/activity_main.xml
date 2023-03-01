@@ -87,13 +87,15 @@
         android:id="@+id/tvTurnLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         android:layout_marginTop="74dp"
         android:text="Current Turn:"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRollDie"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvP2Label" />
+        app:layout_constraintTop_toBottomOf="@+id/tvP2Label"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvTurnEcho"
@@ -143,6 +145,8 @@
         android:text="0"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvMath"
+        app:layout_constraintEnd_toEndOf="@+id/btnRollDie"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toEndOf="@+id/tvMath"
         app:layout_constraintTop_toTopOf="@+id/tvMath"
         app:layout_constraintVertical_bias="0.0" />
