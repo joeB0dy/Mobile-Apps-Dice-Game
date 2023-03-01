@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.514" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvP1Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Player 1:"
@@ -51,40 +51,40 @@
         app:layout_constraintVertical_bias="0.08" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvP2Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Player 2:"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/tvP1Label"
+        app:layout_constraintTop_toBottomOf="@+id/tvP1Label"
         app:layout_constraintVertical_bias="0.077" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvP1Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvP1Label"
+        app:layout_constraintStart_toStartOf="@+id/tvP2Score"
+        app:layout_constraintTop_toTopOf="@+id/tvP1Label" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvP2Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:text="0"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvP2Label"
+        app:layout_constraintStart_toEndOf="@+id/tvP2Label"
+        app:layout_constraintTop_toTopOf="@+id/tvP2Label" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvTurnLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -93,30 +93,70 @@
         android:text="Current Turn:"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvP2Label" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tvTurnEcho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Player 1"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTurnLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintStart_toEndOf="@+id/tvTurnLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTurnLabel" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnGuess"
         android:layout_width="190dp"
         android:layout_height="56dp"
         android:text="Guess"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.936" />
+        app:layout_constraintVertical_bias="0.743" />
+
+    <TextView
+        android:id="@+id/tvMath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:text="0 + 0 ="
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTurnLabel"
+        app:layout_constraintVertical_bias="0.323" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMath"
+        app:layout_constraintStart_toEndOf="@+id/tvMath"
+        app:layout_constraintTop_toTopOf="@+id/tvMath"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:text="YOUR ANSWER IS: "
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
