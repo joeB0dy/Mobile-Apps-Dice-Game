@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">dice practice</string>
+    <string name="rollButtonText">Roll!</string>
+</resources>
