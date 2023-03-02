@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         //initialize points to 0
         binding.tvP1Score.text = player1Points.toString()
         binding.tvP2Score.text = player2Points.toString()
+        getTurn() //needs to loop. needs to add to right person. needs to like switch to another screen or something to avoid continually adding right answer to person.
+
 
        // while (player1Points != 5 || player2Points != 5) {//loop this until
             //  correctAns = false
@@ -105,15 +107,17 @@ class MainActivity : AppCompatActivity() {
                         // correctAns = true
                         if (p1Turn == true) {
                             player1Points += points
+                            binding.tvP1Score.text = player1Points.toString()
                         } else {
                             player2Points += points
+                            binding.tvP1Score.text = player2Points.toString()
                         }
                     } else {
                         binding.tvAnswerEcho.text = "INCORRECT, NO POINTS"
                     }
                 }//end of btnGuess
 
-            }//end. test on macbook with virtual AVD
+            }//end.
 
      //   }//while loop i think
 
@@ -135,10 +139,12 @@ class MainActivity : AppCompatActivity() {
         p1Turn = !p1Turn
         if (p1Turn) {
             binding.tvTurnEcho.text = "Player 1's Turn"
+            return 1
         } else {
             binding.tvTurnEcho.text = "Player 2's Turn"
+            return 0
         }
-        return p1Turn.toString().toInt() //hopefully this works.
+
     }
 }
 
