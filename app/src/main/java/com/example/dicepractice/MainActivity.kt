@@ -8,6 +8,12 @@ import kotlin.random.Random
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding //will automatically add import above.
+
+    private var points = 1 //re-initialized to dice value
+    private var player1Points = 0
+    private var player2Points = 0
+    private var answer = 0
+    private var p1Turn = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -15,9 +21,11 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 //the actual coding
-        var points = 1 //re-initialized to dice value
-        var player1Points = 0
-        var player2Points = 0
+        //initialize points to 0
+        binding.tvP1Score.text = player1Points.toString()
+        binding.tvP2Score.text = player2Points.toString()
+
+
         //set button event handler. below is exclusive of top value.
         binding.btnRollDie.setOnClickListener {
             var diceValue = Random.nextInt(1,7)  //use kotlin version of random. (Alt + Enter)
@@ -30,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
             var num1 = Random.nextInt(0,100)
             var num2 = Random.nextInt(0,100)
-            var answer = 0
+
 
             var points = diceValue //re-initialized to dice value
 
@@ -74,23 +82,31 @@ class MainActivity : AppCompatActivity() {
                 6->  {  //JACKPOT
                     points *=5
                 }
-            }
 
+
+
+            }
+            binding.btnGuess.setOnClickListener{
+                var attempt : Int = binding.etEnterAnswer.text.toString().toInt()   //this is the weirdest conversion.
+                if(attempt == answer){
+
+                    binding.tvAnswerEcho.text = "CORRECT ANSWER! \nPOINTS EARNED"
+                }
+                else{
+                    binding.tvAnswerEcho.text = "INCORRECT, NO POINTS"
+                }
+            }
 
         }//end. test on macbook with virtual AVD
 
 
 
 
-        //guess button stuff
-        binding.btnGuess.setOnClickListener{
-
-        }
-
-
 
     }//on Create end
 }
+
+
 //step one, set viewbinding to true in build.gradle
 //step two, copy paste stuff into drawable.
 
