@@ -13,7 +13,17 @@ First to 20 points wins the game.
 The project was programmed in Android Studio IDE and was mainly programmed in Kotlin. the application is built to work for Android devices. 
 
 #How to Play
-The player set first on turn must be able to 
+The player set first on turn must roll the dice first before entering in a value for generated math equation to be guessed for points. 
+The Dice Numbering System is as follows:
+1. Addition         - 1 point
+2. Subtraction      - 1 point
+3. Multiplication   - 1 point
+4. Double Points    - 2 points
+5. Lose a Turn      - 0 points
+6. Jackpot          - 5 points
+
+The first player to 20 points wins the game.
+
 #Features (As of 03/04/2023)
 -Implemented a boolean like lock to enforce a turn based game. Player on his turn must roll first in order to answer. 
  The player can only roll once (reduces ability to go for an easier answer) and can only answer and get points for a correct answer once 
